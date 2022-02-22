@@ -28,9 +28,16 @@ app.whenReady().then(() => {
     console.log(progressBar.maximum);
   }, 4000)
 
+  let anotherProgressBar = null;
   setTimeout(()=>{
     progressBar.indeterminate = true;
     console.log(progressBar.indeterminate);
+
+    anotherProgressBar = new ProgressBar({
+      maximum: 100,
+      value: 10,
+      indeterminate: false
+    });
   }, 5000)
 
   setTimeout(()=>{
@@ -40,6 +47,7 @@ app.whenReady().then(() => {
 
   setTimeout(()=>{
     progressBar.close()
+    anotherProgressBar.close()
     console.log('closed');
   }, 7000)
 });
