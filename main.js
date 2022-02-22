@@ -37,4 +37,9 @@ app.whenReady().then(() => {
     progressBar.title = 'Downloading...';
     console.log(progressBar.title);
   }, 6000)
+
+  setTimeout(()=>{
+    progressBar.close()
+    console.log('closed');
+  }, 7000)
 });

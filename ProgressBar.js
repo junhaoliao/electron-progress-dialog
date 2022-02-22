@@ -41,6 +41,10 @@ module.exports = class ProgressBar {
     });
   }
 
+  close = () => {
+    this.window.close();
+  }
+
   set title(newValue) {
     this._title = newValue;
     this.window.setTitle(newValue);

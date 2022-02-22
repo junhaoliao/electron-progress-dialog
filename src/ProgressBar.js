@@ -31,7 +31,6 @@ const ProgressBar = (props) => {
                 {percentage}%
             </div>
         }
-
     </Stack>;
 };
 
